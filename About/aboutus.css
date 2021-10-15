@@ -47,6 +47,7 @@ body{
     margin-left:90px;
     width:50%;
     color:white;
+    font-size:18px;
 }
 
 .content-head{
@@ -84,6 +85,7 @@ a{
   letter-spacing: 1px;
   margin-left: 85px;
   cursor: pointer;
+  margin-bottom: 200px;
 }
 
 .social-links{
