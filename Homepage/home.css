@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body{
     font-family: 'Montserrat', sans-serif;
     background:url("../assets/Background.png") no-repeat center center fixed;
@@ -12,29 +12,131 @@
     -o-background-size: cover;
     background-size:cover;
   }
-  
+  /*
   .nav, .logo{
     display: inline-block;
   }
-  
+
   .logo{
     padding: 15px;
   }
-  
+
   .logo-icon{
       margin-left:20px;
       vertical-align: middle;
   }
-  
+
   .logo-text{
       color:white;
       vertical-align: middle;
       display: inline;
       font-family: 'Prata', serif;
       font-size: 24px;
-  
+
   }
-  
+  */
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.2rem 2.5rem 0rem 0rem;
+      margin-bottom: 20px;
+  }
+
+  .hamburger {
+      display: none;
+  }
+
+  .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    /*  background-color: #101010; */
+    background-color: white;
+  }
+
+  li{
+    list-style: none;
+  }
+
+  .nav-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      color: white;
+  }
+
+  .nav-item {
+      margin-left: 5rem;
+  }
+
+  .nav-link{
+      font-size: 1.3rem;
+      font-weight: 400;
+  }
+
+  .nav-link:hover{
+     border-bottom: 2px solid #482ff7;
+  }
+  /*
+  .nav-logo {
+      font-size: 2.1rem;
+      font-weight: 500;
+      color: #482ff7;
+  }*/
+
+  /* original */
+
+  .nav, .logo{
+    display: inline-block;
+  }
+
+  .logo{
+    padding: 15px;
+  }
+
+  .logo-icon{
+    margin-right: 10px;
+      vertical-align: middle;
+      height: 70px;
+      width: 70px;
+  }
+
+  .logo-text{
+      color:white;
+      vertical-align: middle;
+      display: inline;
+      font-family: 'Prata', serif;
+      font-size: 24px;
+
+  }
+
+  .nav {
+    list-style-type: none;
+    text-align: center;
+    width: 50%;
+    margin-left: 300px;
+  }
+
+  .nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px 30px;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .nav a{
+    font-weight: bolder;
+  }
+
   .content{
     display: flex;
     justify-content: center;
@@ -42,7 +144,7 @@
     margin-top: 30px;
     padding: 20px 0;
   }
-  
+
   .content-text{
       margin-left:90px;
       width:50%;
@@ -50,29 +152,29 @@
       font-size:58px;
       font-weight: 650;
   }
-  
-  
+
+
   a{
     text-decoration: none;
     color: white;
     font-weight: bolder;
   }
-  
-  /* TODO: change nav style for mobile layouts */
-  
+
+  /* TODO: change nav style for mobile layouts
+
   .nav {
     list-style-type: none;
     text-align: center;
     width: 50%;
     margin-left: 300px;
   }
-  
+
   .nav li {
     display: inline-block;
     font-size: 20px;
     padding: 20px 30px;
-  }
-  
+  }*/
+
   .download-btn{
     padding: 10px 20px;
     border-radius: 20px;
@@ -84,7 +186,7 @@
     margin-left: 85px;
     cursor: pointer;
   }
-  
+
   .social-links{
     display: flex;
     flex-wrap: wrap;
@@ -94,7 +196,69 @@
     margin-left: auto;
     margin-right: 30px;
   }
-  
+
   .social-links i{
     padding: 20px 5px;
+  }
+
+
+  @media only screen and (max-width: 936px) { /*768px*/
+      .nav-menu {
+          position: fixed;
+          left: -100%;
+          top: 5rem;
+          flex-direction: column;
+          background-color: #02043B;
+          width: 100%;
+          border-radius: 10px;
+          text-align: center;
+          z-index: 100;
+          transition: 0.3s;
+          box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
+      }
+
+      .nav-menu.active {
+          left: 0;
+      }
+
+      .nav-item {
+          margin: 2.5rem 0;
+      }
+
+      .hamburger {
+          display: block;
+          cursor: pointer;
+
+      }
+
+      .hamburger.active .bar:nth-child(2) {
+          opacity: 0;
+      }
+
+      .hamburger.active .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+      }
+
+      .hamburger.active .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+      }
+  }
+
+
+  @media only screen and (max-width: 500px) {
+      .logo-text{
+        display: none;
+      }
+
+      .logo-icon{
+        height: 50px;
+        width: 50px;
+      }
+
+      .contact-header{
+        font-size: 25px;
+        margin-top: 300px;
+        padding: 60px 20px 0 20px;
+      }
+
   }
