@@ -39,19 +39,21 @@ body{
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-top: 70px;
+  margin-top: 20px;
   padding: 20px 0;
 }
 
 .content-text{
-    margin-left:90px;
-    width:50%;
-    color:white;
+  margin-left:90px;
+  width:50%;
+  color:white;
 }
 
 .content-head{
   margin-bottom: 30px;
+  margin-left:-350px; 
 }
+
 
 a{
   text-decoration: none;
@@ -86,16 +88,32 @@ a{
   cursor: pointer;
 }
 
-.social-links{
+.row {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  width: fit-content;
-  align-content: space-between;
-  margin-left: auto;
-  margin-right: 30px;
+  
 }
 
-.social-links i{
-  padding: 20px 5px;
+.column {
+  flex: 20%;
+  float: left;
+  width: 10%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  
 }
+
+.container {
+  padding: 0 16px;
+  color: #fff;
+  text-align: center;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+

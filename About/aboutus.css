@@ -1,0 +1,102 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  background:url("../assets/Background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+}
+
+.nav, .logo{
+  display: inline-block;
+}
+
+.logo{
+  padding: 15px;
+}
+
+.logo-icon{
+    margin-left:20px;
+    vertical-align: middle;
+}
+
+.logo-text{
+    color:white;
+    vertical-align: middle;
+    display: inline;
+    font-family: 'Prata', serif;
+    font-size: 24px;
+
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 30px;
+  padding: 20px 0;
+}
+
+.content-text{
+    margin-left:90px;
+    width:50%;
+    color:white;
+}
+
+.content-head{
+  margin-bottom: 30px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+}
+
+/* TODO: change nav style for mobile layouts */
+
+.nav {
+  list-style-type: none;
+  text-align: center;
+  width: 50%;
+  margin-left: 300px;
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px 30px;
+}
+
+.download-btn{
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  color: #021F59;
+  font-weight: 600;
+  font-family: 'Prata', serif;
+  letter-spacing: 1px;
+  margin-left: 85px;
+  cursor: pointer;
+}
+
+.social-links{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: fit-content;
+  align-content: space-between;
+  margin-left: auto;
+  margin-right: 30px;
+  margin-top: 70px;
+}
+
+.social-links i{
+  padding: 20px 5px;
+}
